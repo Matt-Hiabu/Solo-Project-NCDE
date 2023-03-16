@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 5px;
+    font-size: 2vw;
+}
+
+.title {
+    font-size: 4.5vw;
+}
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body {
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid black;
+    /* margin: 100px; */
+    margin-top: 10px;
+}
+
+.th {
+    width: 100px;
+    }
+
+.table, th, td {
+    border: 1px solid;
+    padding: 20px;
+}
+
+.eventForm {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bodyForm {
+    display: flex;
+    justify-content: space-around;
+}
+
+.likes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addEvent {
+    background-color: blue;
+    color: white;
+    padding:20px;
+}
+
+.adopt {
+    background-color: rgb(205, 7, 7);
+    color: white;
+    padding: 5px 18px;
+}
+
+.likebtn {
+    background-color: green;
+    color: white;
+    padding: 5px 20px;
+}
