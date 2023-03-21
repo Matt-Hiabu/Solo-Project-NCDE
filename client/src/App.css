@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 5px;
-    font-size: 2vw;
+    font-size: 1vw;
 }
 
 .title {
@@ -14,17 +14,12 @@
 
 }
 
-.main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 .body {
     display: flex;
     justify-content: space-around;
-    border: 2px solid black;
-    /* margin: 100px; */
+    
     margin-top: 10px;
 }
 
@@ -34,8 +29,11 @@
 
 .table, th, td {
     border: 1px solid;
-    padding: 20px;
+    padding: 5px;
+    font-size: 1.5vw;
 }
+
+
 
 .eventForm {
     display: flex;
@@ -77,3 +75,10 @@
     color: white;
     padding: 5px 20px;
 }
+
+/* margin: 100px; */
+/* .main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */

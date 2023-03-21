@@ -31,32 +31,39 @@ const Detail = (props) => {
 
     
     return (
-        <div className='App'>
-            <div className='navbar'>
-                <Link to={"/"} >Home</Link>
+        <div className='container-fluid'>
+            <div className='row'>
+                <div className='d-flex justify-content-end'>
+                    <Link to={"/"} ><h3>Home</h3></Link>
+                </div>
             </div>
-            <div className='subtitle'>
-                <h1><span className='title'>Event Details</span></h1>
-                <h3>Details about: {event.name} </h3>
+            <div className='row'>
+                <div className='subtitle'>
+                    <h1><span className='title'>Event Details</span></h1>
+                    <h3>Details about: {event.name} </h3>
+                </div>
             </div>
-            <div className='body'>
-                <div className='bodyForm'>
-                    <div>
-                        <p>Event Location: </p>
-                        <p>Date: </p>
-                        <p>Host:</p>
-                        
+            <div className='row'>
+                <div className='col'></div>
+                <div className='col'>
+                    <div className='bodyForm'>
+                        <div>
+                            <p>Event Location: </p>
+                            <p>Date: </p>
+                            <p>Host:</p>
+                            
+                        </div>
+                        <div>
+                            <p>{event.location}</p>
+                            <p>{event.date}</p>
+                            <p>{event.host}</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>{event.location}</p>
-                        <p>{event.date}</p>
-                        <p>{event.host}</p>
+                    <div className='likes'>
+                        <button onClick={(e)=>{deleteEvent(event._id)}} className="btn btn-danger"> Delete {event.name}</button>
                     </div>
                 </div>
-                <div className='likes'>
-                    <button onClick={(e)=>{deleteEvent(event._id)}} className="adopt"> Delete {event.name}</button>
-                </div>
-                
+                <div className='col'></div>
             </div>
         </div>
     );

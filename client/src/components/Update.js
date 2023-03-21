@@ -79,22 +79,28 @@ const Update = (props) => {
             .catch(err => console.log(err))
     }
     return (
-        <div className='App'>
-            <div className='navbar'>
-                <Link to={"/"} >Home</Link>
-                
+        <div className='container-fluid'>
+            <div className='row'>
+                <div className='d-flex justify-content-end'>
+                <Link to={"/"} ><h3>Home</h3></Link>
+                </div>
             </div>
-            <div className='subtitle'>
+            <div className='row'>
+                <div className='subtitle'>
                 <h1><span className='title'>Edit {name} Event</span></h1>
+                </div>
             </div>
             
-            <div className='body'>
-                <form onSubmit={updateEvent} className='EventForm'>
+            <div className='row'>
+                <div className='col'></div>
+                <form onSubmit={updateEvent} className='col'>
                     <div>
-                        <p>
-                            <label>Event Name:</label><br/>
-                        {}
-                            <input type="text" 
+                        
+                            <label className='form-label'>Event Name:</label>
+                        
+                            <input 
+                            className='form-control'
+                            type="text" 
                             name="name" 
                             value={name}
                             onChange = {handleName}/>
@@ -103,10 +109,12 @@ const Update = (props) => {
                                 <p>{ nameError }</p> :
                                 ''
                             }
-                        </p>
-                        <p>
-                            <label>Event location:</label><br/>
-                            <input type="text" 
+                        
+                        
+                            <label className='form-label'>Event location:</label>
+                            <input 
+                            className='form-control'
+                            type="text" 
                             name="location" 
                             value={location}
                             onChange = {handleLocation}/>
@@ -115,10 +123,12 @@ const Update = (props) => {
                                 <p>{ locationError }</p> :
                                 ''
                             }
-                        </p>
-                        <p>
-                            <label>Event Date:</label><br/>
-                            <input type="date" 
+                        
+                        
+                            <label className='form-label'>Event Date:</label>
+                            <input 
+                            className='form-control'
+                            type="date" 
                             name="date" 
                             value={date}
                             onChange = {handleDate}/>
@@ -127,10 +137,12 @@ const Update = (props) => {
                                 <p>{ dateError }</p> :
                                 ''
                             }
-                        </p>
-                        <p>
-                            <label>Host:</label><br/>
-                            <input type="text" 
+                        
+                        
+                            <label className='form-label'>Host:</label>
+                            <input 
+                            className='form-control'
+                            type="text" 
                             name="host" 
                             value={host}
                             onChange = {handleHost}/>
@@ -139,12 +151,11 @@ const Update = (props) => {
                                 <p>{ hostError }</p> :
                                 ''
                             }
-                        </p>
-                        <input type="submit" value={"Save Changes"} className='addEvent'/>
-                    </div>
-                    <div>
+                        
+                        <input className='btn btn-primary' type="submit" value={"Save Changes"}/>
                     </div>
                 </form>
+                <div className='col'></div>
             </div>
         </div>
     )

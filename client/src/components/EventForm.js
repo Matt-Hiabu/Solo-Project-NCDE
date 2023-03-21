@@ -68,56 +68,59 @@ const EventForm = (props) => {
     }
     
     return (
-        <div className='App'>
-            <div className='navbar' >
-                    <Link to={"/"} >Home</Link>
+        <div className='container-fluid'>
+            <div className='row'>
+                <div className='d-flex justify-content-end'>
+                    <Link to={"/"} ><h3>Home</h3></Link>
+                </div>    
             </div>
-            <div className='main'>
+
+            <div className='row'>
                 <div className='subtitle'>
                     <h1><span className='title'>Add A New Event!</span></h1>
                 </div>
-                <div className='body'>
-                    <form onSubmit={onSubmitHandler} className='eventForm'>
-                        <div>
-                            <p>
-                                <label>Event Name:</label><br/>
-                            {}
-                                <input type="text" onChange= {handleName}/>
+            </div>
+            <div>
+                <div className='row'>
+                    <div className='col'></div>
+                    <form className='col' onSubmit={onSubmitHandler} >
+                        <div >
+                                <label className='form-label'>Event Name:</label>
+                                <input className='form-control' type="text" onChange= {handleName}/>
                                 {
                                     nameError ?
                                     <p>{ nameError }</p> :
                                     ''
                                 }
-                            </p>
-                            <p>
-                                <label>Location:</label><br/>
-                                <input type="text" onChange = {handleLocation}/>
+
+                                <label className='form-label'>Location:</label>
+                                <input className='form-control' type="text" onChange = {handleLocation}/>
                                 {
                                     locationError ?
                                     <p>{ locationError }</p> :
                                     ''
                                 }
-                            </p>
-                            <p>
-                                <label>Date:</label><br/>
-                                <input 
-                                type="date" 
-                                onChange = {(e)=>setDate(e.target.value)}
-                                ref= {dateInputRef}
+
+                                <label className='form-label'>Date:</label>
+                                <input
+                                    className='form-control' 
+                                    type="date" 
+                                    onChange = {(e)=>setDate(e.target.value)}
+                                    ref= {dateInputRef} // 2023 -03-02
                                 />
-                            </p>
-                            <p>
-                                <label>Host:</label><br/>
-                                <input type="text" onChange = {handleHost}/>
+
+
+                                <label className='form-label'>Host:</label>
+                                <input className='form-control' type="text" onChange = {handleHost}/>
                                 {
                                     hostError ?
                                     <p>{ hostError }</p> :
                                     ''
                                 }
-                            </p>
-                            <input type="submit" value={"Add Event"} className='addEvent'/>
+                            <input className='btn btn-primary'  type="submit" value={"Add Event"}/>
                         </div>
                     </form>
+                    <div className='col'></div>
                 </div>
             </div>
         </div>

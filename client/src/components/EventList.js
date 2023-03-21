@@ -33,6 +33,16 @@ const EventList = (props) => {
             })
     }, []);
 
+    const logout = () => {
+        axios.post('http://localhost:8000/api/logout', {}, {withCredentials:true}) 
+        .then((res) => {
+            console.log(res);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+    }
+
 const result = event.map((event, index)=>{
     return (
         
@@ -44,35 +54,41 @@ const result = event.map((event, index)=>{
                 <td>
                     <Link to={"/edit/" + event._id}> Edit  </Link>
                     |
-                    <button onClick={(e)=>{deleteEvent(event._id)}} className="adopt">  Delete</button>
+                    <button onClick={(e)=>{deleteEvent(event._id)}} className="btn btn-danger">  Delete</button>
                 </td>
             </tr> 
         
     )});
 
     return (
-    <div className='App'>
-        <div className='navbar'>
-            <Link to={"/events/new"} >Add Event</Link>
-        </div>
-        <div className='main'>
-            <div className='subtitle'>
-                <h1><span className='title'>NorCal Dance Events</span></h1>
-                <h3>Local Street Dance Event Finder and Organizer</h3>
+    <div className='container-fluid'>
+        <div className='row '>
+            <div className='d-flex justify-content-end'>
+                <Link className='' to={"/events/new"} ><h3>Add Event</h3></Link>
+                <Link to={"/register"} onClick={logout}><h3>Log Out</h3></Link>
             </div>
-            <div className='body'>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Date</th>
-                            <th>Edit/Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {result}
-                    </tbody>
-                    </table>
+        </div>
+        <div className='row'>
+            <div className=''>
+                <div className='subtitle'>
+                    <h1><span className='title'>NorCal Dance Events</span></h1>
+                    <h3>Local Street Dance Event Finder and Organizer</h3>
+                </div>
+                
+                <div className='row'>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th>Edit/Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {result}
+                        </tbody>
+                        </table>
+                </div>
             </div>
         </div>    
     </div>
