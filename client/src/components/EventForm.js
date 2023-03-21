@@ -71,7 +71,7 @@ const EventForm = (props) => {
         <div className='container-fluid'>
             <div className='row'>
                 <div className='d-flex justify-content-end'>
-                    <Link to={"/"} ><h3>Home</h3></Link>
+                    <Link className='btn btn-success' to={"/"} ><h3>Home</h3></Link>
                 </div>    
             </div>
 
@@ -117,6 +117,7 @@ const EventForm = (props) => {
                                     <p>{ hostError }</p> :
                                     ''
                                 }
+                                <br/>
                             <input className='btn btn-primary'  type="submit" value={"Add Event"}/>
                         </div>
                     </form>

@@ -27,18 +27,30 @@ const Login = (props) => {
         });
     }
 return (
-    <div>
-        <h1>Login!</h1>
-        <form onSubmit={submitHandler}>
-        <label className='form-label'>Email</label>
-            <input className='form-control' type="text" name='email' value={userLogin.email} onChange={onChangeHandler} />
+    <div className='container-fluid'>
+        <div>
+            <div className='navbar-brand bg-success mx-3'>
+                <div className='font-monospace text-decoration-underline display-5'>NCDE</div>
+            </div></div>
+        <div className='row'>
+            <h1 className='display-2 text-center'>Login!</h1>
+        </div>
+        <div className='row'>
+            <div className='col'></div>
+            <div className='col'>
+                <form onSubmit={submitHandler}>
+                <label className='form-label'>Email</label>
+                    <input className='form-control' type="text" name='email' value={userLogin.email} onChange={onChangeHandler} />
 
-            <label className='form-label'>Password</label>
-            <input className='form-control' type="password" name='password' value={userLogin.password} onChange={onChangeHandler} />
-        <button>Login</button>
-            <Link to={'/register'}>Don't have an account? click here to register</Link>
-        </form>
-        
+                    <label className='form-label'>Password</label>
+                    <input className='form-control' type="password" name='password' value={userLogin.password} onChange={onChangeHandler} />
+                    <br/>
+                <button className='btn btn-outline-success me-2'>Login</button>
+                    <Link to={'/register'}>Don't have an account? click here to register</Link>
+                </form>
+            </div>
+            <div className='col'></div>
+        </div>
     </div>
 )
 }

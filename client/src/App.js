@@ -12,7 +12,7 @@ import Dashboard from "./components/Dashboard";
 function App () {
 
     return(
-        <div className='container-fluid'>
+        <div className='container-fluid bg-transparent'>
         <BrowserRouter>
             <Routes>
                 <Route element={<Login/>} path="/login" default/>

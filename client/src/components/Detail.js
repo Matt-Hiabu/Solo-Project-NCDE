@@ -34,7 +34,7 @@ const Detail = (props) => {
         <div className='container-fluid'>
             <div className='row'>
                 <div className='d-flex justify-content-end'>
-                    <Link to={"/"} ><h3>Home</h3></Link>
+                    <Link className='btn btn-success' to={"/"} ><h3>Home</h3></Link>
                 </div>
             </div>
             <div className='row'>
@@ -47,7 +47,7 @@ const Detail = (props) => {
                 <div className='col'></div>
                 <div className='col'>
                     <div className='bodyForm'>
-                        <div>
+                        <div className='fw-bold'>
                             <p>Event Location: </p>
                             <p>Date: </p>
                             <p>Host:</p>
