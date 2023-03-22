@@ -1,14 +1,12 @@
 import React, { useRef, useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-import {format} from 'date-fns'
 
 const EventForm = (props) => {
     const [event, setEvent] = useState(""); 
     const [name, setName] = useState(""); 
     const [nameError, setNameError] = useState(""); 
 
-    format(new Date(), 'dd/mm/yyyy')
 
     const handleName = (e) => {
         setName(e.target.value);
@@ -51,7 +49,7 @@ const EventForm = (props) => {
     const onSubmitHandler = (e) => {
         
         e.preventDefault();
-        
+    
         axios.post('http://localhost:8000/api/events', {
             name,
             location,
@@ -62,10 +60,13 @@ const EventForm = (props) => {
                 console.log(res);
                 console.log(res.data);
                 setEvent([...event, res.data]);
-                navigate("/")
+                navigate('/')
             })
-            .catch(err=>console.log(err))
-    }
+            
+            .catch(err=>{
+                console.log(err)
+            });
+        }
     
     return (
         <div className='container-fluid'>

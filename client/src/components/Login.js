@@ -9,9 +9,17 @@ const Login = (props) => {
         password:''
     })
 
+    const [userLoginError, setUserLoginError] = useState('')
+
     const onChangeHandler = (e) => {
         setUserLogin({...userLogin, [e.target.name]: e.target.value})
+        if(e.target.value.length < 1) {
+            setUserLoginError('This field is required.');
+        } else {
+            setUserLoginError("");
+        }
     }
+
 
     // ! onSubmitHandler
     const submitHandler = (e) => {
@@ -41,9 +49,19 @@ return (
                 <form onSubmit={submitHandler}>
                 <label className='form-label'>Email</label>
                     <input className='form-control' type="text" name='email' value={userLogin.email} onChange={onChangeHandler} />
+                    {
+                        userLoginError ?
+                        <p>{ userLoginError }</p> :
+                        ''
+                    }
 
                     <label className='form-label'>Password</label>
                     <input className='form-control' type="password" name='password' value={userLogin.password} onChange={onChangeHandler} />
+                    {
+                        userLoginError ?
+                        <p>{ userLoginError }</p> :
+                        ''
+                    }
                     <br/>
                 <button className='btn btn-outline-success me-2'>Login</button>
                     <Link to={'/register'}>Don't have an account? click here to register</Link>
