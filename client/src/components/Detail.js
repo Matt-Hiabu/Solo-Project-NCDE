@@ -31,12 +31,13 @@ const Detail = (props) => {
 
     
     return (
-        <div className='container-fluid'>
-            <div className='row'>
-                <div className='d-flex justify-content-end'>
+        <div>
+            <nav className="navbar bg-dark bg-gradient">
+                <div className='NCDE'>NCDE</div>
+                <div className='navright'>
                     <Link className='btn btn-success' to={"/"} ><h3>Home</h3></Link>
                 </div>
-            </div>
+            </nav>
             <div className='row'>
                 <div className='subtitle'>
                     <h1><span className='title'>Event Details</span></h1>

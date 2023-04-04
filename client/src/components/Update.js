@@ -79,12 +79,13 @@ const Update = (props) => {
             .catch(err => console.log(err))
     }
     return (
-        <div className='container-fluid'>
-            <div className='row'>
-                <div className='d-flex justify-content-end'>
-                <Link className='btn btn-success' to={"/"} ><h3>Home</h3></Link>
+        <div>
+            <nav className="navbar bg-dark bg-gradient">
+                <div className='NCDE'>NCDE</div>
+                <div className='navright'>
+                    <Link className='btn btn-success' to={"/"} ><h3>Home</h3></Link>
                 </div>
-            </div>
+            </nav>
             <div className='row'>
                 <div className='subtitle'>
                 <h1><span className='title'>Edit {name} Event</span></h1>

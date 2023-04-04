@@ -35,11 +35,10 @@ const Login = (props) => {
         });
     }
 return (
-    <div className='container-fluid'>
-        <div>
-            <div className='navbar-brand bg-success mx-3'>
-                <div className='font-monospace text-decoration-underline display-5'>NCDE</div>
-            </div></div>
+    <div>
+        <nav className="navbar bg-dark bg-gradient">
+            <div className='NCDE'>NCDE</div>
+        </nav>
         <div className='row'>
             <h1 className='display-2 text-center'>Login!</h1>
         </div>

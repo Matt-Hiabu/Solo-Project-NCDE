@@ -61,13 +61,15 @@ const result = event.map((event, index)=>{
     )});
 
     return (
-    <div className='container-fluid'>
-        <div className='row'>
-            <div className='navbar d-flex justify-content-end'>
-                <Link className='btn btn-outline-success mx-2' to={"/events/new"} ><h3>Add Event</h3></Link>
-                <Link className='btn btn-sm btn-outline-secondary' to={"/register"} onClick={logout}><h3>Log Out</h3></Link>
+    <div>
+        <nav className="navbar bg-dark bg-gradient">
+            <div className='NCDE'>NCDE</div>
+            <div className='navright'>
+                <Link className='btn btn-sm btn-outline-light mx-2' to={"/events/new"} ><h3>Add Event</h3></Link>
+                <Link className='btn btn-sm btn-outline-danger mx-2' to={"/register"} onClick={logout}><h3>Log Out</h3></Link>
             </div>
-        </div>
+        </nav>
+        <div>
         <div className='row'>
             <div className='font-monospace text-decoration-underline'>
                 <div className='subtitle'>
@@ -93,7 +95,8 @@ const result = event.map((event, index)=>{
                             </table>
                     </div>
                     <div className='col'></div>
-                </div>    
+        </div> 
+        </div>
     </div>
     );
 }

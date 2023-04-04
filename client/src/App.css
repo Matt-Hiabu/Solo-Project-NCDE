@@ -1,38 +1,36 @@
 * {
     margin: 0px;
-    padding: 5.5px;
+    padding: 0px;
     font-size: 1vw;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NCDE{
+    color: white;
+    font-size: 4em;
+    font-family: Changa One;
+    margin: 0px 20px;
+}
+
+.navright{
+    margin: 0px 18px;
 }
 
 .title {
     font-size: 4.5vw;
 }
-.navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-}
-
-
 
 .body {
     display: flex;
     justify-content: space-around;
-    
     margin-top: 10px;
 }
-
-/* .th {
-    width: 100px;
-    }
-
-.table, th, td {
-    border: 1px solid;
-    padding: 5px;
-    font-size: 1.5vw;
-} */
-
 
 
 .eventForm {
@@ -75,10 +73,3 @@
     color: white;
     padding: 5px 20px;
 }
-
-/* margin: 100px; */
-/* .main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
