@@ -15,6 +15,7 @@
     color: white;
     font-size: 4em;
     font-family: Changa One;
+    font-style: italic;
     margin: 0px 20px;
 }
 
@@ -22,8 +23,20 @@
     margin: 0px 18px;
 }
 
+.mainHeading {
+    font-family: Changa One;
+}
+
+.subHeading {
+    font-size: 3em;
+}
+
 .title {
-    font-size: 4.5vw;
+    font-size: 3em;
+}
+
+.row1 {
+    margin-bottom: 19px;
 }
 
 .body {
@@ -32,6 +45,29 @@
     margin-top: 10px;
 }
 
+.table {
+    border-radius: .5rem;
+    
+}
+
+.editLink {
+    color: white;
+}
+.editLink:link {
+    text-decoration: none;
+    
+
+}
+
+.editLink:hover {
+    color: hotpink;
+
+}
+
+.editLink:active {
+    color: blue;
+
+}
 
 .eventForm {
     display: flex;

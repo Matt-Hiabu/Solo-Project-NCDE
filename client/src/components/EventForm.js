@@ -76,7 +76,7 @@ const EventForm = (props) => {
                     <Link className='btn btn-success' to={"/"} ><h3>Home</h3></Link>
                 </div>
             </nav>
-            <div className='row'>
+            <div className='mainHeading'>
                 <div className='subtitle'>
                     <h1><span className='title'>Add A New Event!</span></h1>
                 </div>

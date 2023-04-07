@@ -42,7 +42,11 @@ return (
             <div className='NCDE'>NCDE</div>
         </nav>
         <div className='row'>
-            <h1 className='display-1 text-center'>Register!</h1>
+            <div className='mainHeading'>
+                <div className='subtitle'>
+                    <h1><span className='title'>Register!</span></h1>
+                </div>
+            </div>
         </div>
         <div className='row'>
             <div className='col'></div>
@@ -88,8 +92,8 @@ return (
                         ''
                     }
                     <br/>
-                    <button className='btn btn-outline-success me-2'>Register</button>
-                    <Link to={'/login'}>Already have an account? click here to login</Link>
+                    <button className='btn btn-success me-2'>Register</button>
+                    <Link to={'/login'} className='text-dark'>Already have an account? click here to login</Link>
                 </form>
                 </div>
             <div className='col'></div>

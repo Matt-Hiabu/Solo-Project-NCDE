@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Moment from 'react-moment';
 
 const EventList = (props) => {
     const [event, setEvent] = useState([]);
@@ -48,13 +49,13 @@ const result = event.map((event, index)=>{
         
             <tr className='text-center' key={index}> 
                 <td>
-                <Link className='link-primary' to={`/${event._id}`}><h5>{event.name}</h5></Link>
+                <Link className='editLink' to={`/${event._id}`}><h5>{event.name}</h5></Link>
                 </td>
-                <td>{event.date}</td>
+                <td><Moment format='MMMM Do, YYYY'>{event.date}</Moment></td>
                 <td>
-                    <Link className='link-success' to={"/edit/" + event._id}> Edit  </Link>
-                    <>| </>
-                    <button onClick={(e)=>{deleteEvent(event._id)}} className="btn btn-danger">Delete</button>
+                    <Link className='' to={"/edit/" + event._id}> <button className='btn btn-sm btn-success'>Edit</button></Link>
+                    <> | </>
+                    <button onClick={(e)=>{deleteEvent(event._id)}} className="btn btn-sm btn-outline-danger btn-close"></button>
                 </td>
             </tr> 
         
@@ -70,18 +71,18 @@ const result = event.map((event, index)=>{
             </div>
         </nav>
         <div>
-        <div className='row'>
-            <div className='font-monospace text-decoration-underline'>
+        <div className='row1'>
+            <div className='mainHeading'>
                 <div className='subtitle'>
                     <h1><span className='title'>NorCal Dance Events</span></h1>
-                    <h3>Local Street Dance Event Finder and Organizer</h3>
+                    <h3 className='subHeading'>Local Street Dance Event Finder and Organizer</h3>
                 </div>
             </div>
         </div>
         <div className='row'>
                     <div className='col'></div>
                     <div className='col-6 table-responsive'>
-                        <table className='table align-middle table-bordered border-dark table-hover table-striped'>
+                        <table className='table align-middle table-dark table-hover table-striped'>
                             <thead>
                                 <tr className='text-center'>
                                     <th>Name</th>
